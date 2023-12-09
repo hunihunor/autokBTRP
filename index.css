@@ -35,6 +35,11 @@ width: fit-content;
   font-weight: 600;
 }
 
+body{
+  width: 70%;
+  margin: auto;
+}
+
 main {
   display: grid;
   grid-template-columns: 1fr 300px;
@@ -69,6 +74,18 @@ table{
     text-align: left;
 }
 
+th{
+  border-bottom: 2px solid black;
+  border-collapse: collapse;
+}
+
+td{
+  border-bottom: 1px solid gray;
+}
+tbody tr:nth-child(odd){
+  background-color: lightgray;
+}
+
 /* people grid from here */
 
 .people{
@@ -92,12 +109,11 @@ table{
     border: 1px solid gray;
     border-radius: 10px;
     margin: 0.5rem;
-    height: fit-content;
+    height: ;
 }
 
 .img_p{
-    margin: 2rem;
-
+  margin: 2rem;
 }
 
 .gray_footer{
@@ -106,4 +122,13 @@ table{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 
+}
+
+@media screen and (max-width: 770px) {
+  .gallery{
+    display: none;
+  }
+  main{
+    grid-template-columns: 1fr;
+  }
 }
